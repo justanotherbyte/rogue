@@ -5,7 +5,7 @@ pub const GPSET0: u32 = PERIPHERAL_BASE + 0x20001C;
 pub const GPCLR0: u32 = PERIPHERAL_BASE + 0x200028;
 pub const GPPUPPDN0: u32 = PERIPHERAL_BASE + 0x2000E4;
 
-pub const GPIO_MAX_PIN: u32 = 53;
+pub const GPIO_MAX_PIN: u8 = 53;
 pub const GPIO_FUNCTION_ALT5: u32 = 2;
 
 // AUX

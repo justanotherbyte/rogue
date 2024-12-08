@@ -1,7 +1,7 @@
 #![no_std]
 #![no_main]
 
-use core::arch::{asm, global_asm};
+use core::arch::global_asm;
 use core::panic::PanicInfo;
 
 pub mod bsp;
@@ -15,12 +15,7 @@ global_asm!(include_str!("boot.s"));
 fn _start_rust() -> ! {
     uart::init();
     loop {
-        uart::writeln("Hello World! From Rogue! This is a timing test");
-        for _ in 0..200_000 {
-            unsafe {
-                asm!("nop");
-            }
-        }
+        uart::writeln("Hello World! From Rogue! new gpio test");
     }
 }
 
